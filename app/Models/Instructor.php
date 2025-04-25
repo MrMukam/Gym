@@ -6,5 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Instructor extends Model
 {
-    //
+    protected $fillable = [
+        'name', 'password'
+    ];
+
+    public function awards()
+    {
+        return $this->hasMany(Awards::class);
+    }
 }

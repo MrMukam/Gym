@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('subscription_plans', function (Blueprint $table) {
             $table->id();
+            $table->string("category_id");
+            $table->enum("attendance",['hr', 'mn', 'yr']);
             $table->timestamps();
         });
     }
